@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vardhaman Ainapure — Java Full Stack Developer</title>
+  <meta name="description" content="Vardhaman Ainapure is a Java Full Stack Developer and CS graduate passionate about building efficient, scalable software solutions." />
+  <meta name="keywords" content="Vardhaman Ainapure, Java Full Stack Developer, React, JavaScript, Python, Portfolio, Software Engineer" />
+  <meta name="author" content="Vardhaman Ainapure" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
+          <polygon points="24,4 44,40 4,40" fill="none" stroke="#8052ff" stroke-width="2" />
+          <polygon points="24,14 36,36 12,36" fill="#8052ff" opacity="0.3" />
+        </svg>
+        <span class="loader-initials">VA</span>
+      </div>
+      <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
+      <p class="loader-status" id="loaderStatus">Initializing experience...</p>
+    </div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- BACKGROUND -->
+  <div class="bg-root" aria-hidden="true">
+    <canvas id="particleCanvas"></canvas>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="aurora"></div>
+    <div class="grid-overlay"></div>
+    <div class="noise-overlay"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-wrap page-width">
+      <a href="#hero" class="nav-brand">
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
+          <polygon points="24,4 44,40 4,40" fill="none" stroke="#8052ff" stroke-width="3"/>
+          <polygon points="24,14 36,36 12,36" fill="#8052ff" opacity="0.3"/>
+        </svg>
+        <span>Vardhaman</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#skills" class="nav-item">Skills</a></li>
+        <li><a href="#projects" class="nav-item">Projects</a></li>
+        <li><a href="#education" class="nav-item">Education</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn-pill nav-pill">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mob-link">About</a></li>
+      <li><a href="#skills" class="mob-link">Skills</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#education" class="mob-link">Education</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+      <li><a href="#contact" class="btn-pill mob-cta">Get In Touch</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section id="hero" class="section hero">
+      <div class="hero-wrap page-width">
+        <div class="hero-left">
+          <div class="hero-eyebrow reveal" data-d="0">
+            <span class="eyebrow-pulse"></span>
+            <span>Available for opportunities</span>
+          </div>
+          <h1 class="hero-h1 reveal" data-d="50">
+            <span class="greet">Hello, I'm</span>
+            <span class="name-block">Vardhaman<br/>Ainapure</span>
+          </h1>
+          <div class="hero-role reveal" data-d="200">
+            Java Full Stack&nbsp;<span class="typed-text" id="typedEl"></span><span class="blink-cursor">|</span>
+          </div>
+          <p class="hero-bio reveal" data-d="350">
+            Motivated Computer Science graduate building efficient, secure, and scalable software.
+            Passionate about AI, web development, and data-driven applications — turning academic
+            knowledge into real-world impact with creativity and teamwork.
+          </p>
+          <div class="hero-cta reveal" data-d="450">
+            <a href="#contact" class="btn-pill btn-glow">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+            <a href="#projects" class="btn-ghost magnetic">
+              View Projects
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#contact" class="btn-ghost magnetic">Contact Me</a>
+          </div>
+          <div class="skill-tags reveal" data-d="550">
+            <span class="tag">React</span><span class="tag">Java</span><span class="tag">Python</span>
+            <span class="tag">JavaScript</span><span class="tag">Firebase</span><span class="tag">MySQL</span>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div class="orb-system">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <div class="orbit orbit-3"></div>
+            <div class="avatar-wrap">
+              <div class="avatar-glow"></div>
+              <div class="avatar">VA</div>
+            </div>
+            <div class="fi fi-1" title="Java">
+              <svg viewBox="0 0 48 48" width="26" height="26"><path fill="#F44336" d="M18.1 21.9c0 0-1.5 0.9 1.1 1.2 3.2 0.4 4.8 0.3 8.3-0.3 0 0 0.9 0.6 2.2 1.1-7.8 3.3-17.6-0.2-11.6-2z"/><path fill="#F44336" d="M17.1 18.7c0 0-1.7 1.3 0.9 1.5 3.3 0.3 5.9 0.3 10.4-0.4 0 0 0.6 0.6 1.6 1-9.2 2.7-19.5 0.2-12.9-2.1z"/><path fill="#F44336" d="M24.4 12.5c1.9 2.1-0.5 4.1-0.5 4.1s4.8-2.5 2.6-5.6c-2.1-3-3.7-4.5 5-9.6 0 0-13.7 3.4-7.1 11.1z"/><path fill="#FFC107" d="M32.7 24.8c0 0 1.1 0.9-1.2 1.6-4.4 1.3-18.4 1.7-22.3 0.1-1.4-0.6 1.2-1.4 2-1.6 0.8-0.2 1.3-0.2 1.3-0.2-1.5-1-9.7 2.1-4.2 2.9 15.1 2.5 27.5-1.1 24.4-2.8z"/></svg>
+            </div>
+            <div class="fi fi-2" title="React">
+              <svg viewBox="0 0 48 48" width="26" height="26"><circle cx="24" cy="24" r="4" fill="#61DAFB"/><ellipse cx="24" cy="24" rx="20" ry="7" fill="none" stroke="#61DAFB" stroke-width="2"/><ellipse cx="24" cy="24" rx="20" ry="7" fill="none" stroke="#61DAFB" stroke-width="2" transform="rotate(60,24,24)"/><ellipse cx="24" cy="24" rx="20" ry="7" fill="none" stroke="#61DAFB" stroke-width="2" transform="rotate(120,24,24)"/></svg>
+            </div>
+            <div class="fi fi-3" title="Python">
+              <svg viewBox="0 0 48 48" width="26" height="26"><path fill="#3776ab" d="M24 3.5c-7 0-8.5 3-8.5 6.5v3h17v2H13.5C10 15 7 17 7 24s3 9 6.5 9H16v-3.5c0-3.5 3-6 6-6h8c3 0 5-2 5-5v-9c0-3-2-6-11-6zm-3 5a1.5 1.5 0 110 3 1.5 1.5 0 010-3z"/><path fill="#ffd43b" d="M24 44.5c7 0 8.5-3 8.5-6.5v-3H16v-2h21c3.5 0 6.5-2 6.5-9s-3-9-6.5-9H35v3.5c0 3.5-3 6-6 6h-8c-3 0-5 2-5 5v9c0 3 2 6 11 6zm3-5a1.5 1.5 0 110-3 1.5 1.5 0 010 3z"/></svg>
+            </div>
+            <div class="fi fi-4" title="JavaScript">
+              <svg viewBox="0 0 48 48" width="26" height="26"><rect width="48" height="48" rx="4" fill="#F7DF1E"/><path d="M13 36l3.6-2.2c.7 1.2 1.3 2.2 2.8 2.2 1.4 0 2.3-.5 2.3-2.7V20h4.5v13.4c0 4.4-2.6 6.4-6.4 6.4-3.4 0-5.4-1.8-6.4-3.9zM29 35.5l3.6-2.1c.9 1.5 2.2 2.7 4.4 2.7 1.8 0 3-.9 3-2.2 0-1.5-1.2-2-3.2-2.9l-1.1-.5c-3.2-1.4-5.3-3.1-5.3-6.7 0-3.3 2.5-5.9 6.5-5.9 2.8 0 4.9 1 6.3 3.6l-3.5 2.2c-.8-1.4-1.6-1.9-2.9-1.9-1.3 0-2.1.8-2.1 1.9 0 1.3.8 1.9 2.7 2.7l1.1.5c3.8 1.6 5.9 3.3 5.9 7 0 4-3.1 6.2-7.3 6.2-4 0-6.7-1.9-7.9-4.6z"/></svg>
+            </div>
+            <div class="fi fi-5" title="GitHub">
+              <svg viewBox="0 0 48 48" width="26" height="26"><path fill="#fff" d="M24 2C11.85 2 2 11.85 2 24c0 9.7 6.3 17.9 15.1 20.8 1.1.2 1.5-.5 1.5-1.1v-3.8c-6.1 1.3-7.4-2.9-7.4-2.9-.9-2.4-2.3-3-2.3-3-1.9-1.3.1-1.3.1-1.3 2.1.1 3.1 2.1 3.1 2.1 1.9 3.2 4.9 2.3 6.1 1.7.2-1.3.7-2.3 1.3-2.8-4.8-.5-9.9-2.4-9.9-10.8 0-2.4.9-4.3 2.3-5.9-.2-.5-1-2.8.2-5.9 0 0 1.9-.6 6.2 2.3A21.6 21.6 0 0124 11c1.9 0 3.8.3 5.6.8 4.3-2.9 6.2-2.3 6.2-2.3 1.2 3.1.4 5.4.2 5.9 1.4 1.5 2.3 3.5 2.3 5.9 0 8.4-5.1 10.2-10 10.8.8.7 1.5 2 1.5 4.1v6.1c0 .6.4 1.3 1.5 1.1C39.7 41.9 46 33.7 46 24 46 11.85 36.15 2 24 2z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint"><div class="scroll-dot-anim"></div><span>Scroll to explore</span></div>
+    </section>
+
+    <!-- ====== ABOUT ====== -->
+    <section id="about" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>About Me</div>
+        <div class="about-grid">
+          <div class="reveal-left">
+            <h2 class="sec-headline">Building software<br/><em class="accent">that matters.</em></h2>
+          </div>
+          <div class="about-right reveal-right">
+            <p class="body-copy">Motivated Computer Science graduate from Bahubali College of Engineering, seeking to launch a career in technology-driven environments. Focused on building efficient, secure, and scalable software solutions through continuous learning.</p>
+            <p class="body-copy mt16">Interested in exploring fields like AI, web development, and data-driven applications. Eager to apply academic knowledge to solve real-world challenges with creativity and teamwork. Aspiring to grow into a versatile developer contributing to innovative digital transformation projects.</p>
+            <div class="stats-row">
+              <div class="stat reveal" data-d="0"><span class="stat-n counter" data-t="3">0</span><span class="stat-l">Projects</span></div>
+              <div class="stat reveal" data-d="100"><span class="stat-n counter" data-t="15">0</span><span class="stat-l">Skills</span></div>
+              <div class="stat reveal" data-d="200"><span class="stat-n counter" data-t="4">0</span><span class="stat-l">Certificates</span></div>
+              <div class="stat reveal" data-d="300"><span class="stat-n">2026</span><span class="stat-l">Graduation</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SKILLS ====== -->
+    <section id="skills" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>Technical Skills</div>
+        <h2 class="sec-headline reveal">Crafting with<br/><em class="accent">the right tools.</em></h2>
+        <div class="skills-grid">
+          <div class="skill-cat reveal" data-d="0">
+            <div class="skill-cat-head"><div class="skill-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><span>Frontend</span></div>
+            <div class="skill-pills"><span class="sp">HTML</span><span class="sp">CSS</span><span class="sp">JavaScript</span><span class="sp">React</span></div>
+          </div>
+          <div class="skill-cat reveal" data-d="100">
+            <div class="skill-cat-head"><div class="skill-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><span>Backend</span></div>
+            <div class="skill-pills"><span class="sp">Java</span><span class="sp">Python</span></div>
+          </div>
+          <div class="skill-cat reveal" data-d="200">
+            <div class="skill-cat-head"><div class="skill-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div><span>Database</span></div>
+            <div class="skill-pills"><span class="sp">MySQL</span><span class="sp">Oracle</span><span class="sp">SQL</span></div>
+          </div>
+          <div class="skill-cat reveal" data-d="300">
+            <div class="skill-cat-head"><div class="skill-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 010 14.14M4.93 4.93a10 10 0 000 14.14"/></svg></div><span>Tools &amp; Platforms</span></div>
+            <div class="skill-pills"><span class="sp">Git</span><span class="sp">GitHub</span><span class="sp">Excel</span><span class="sp">Firebase</span><span class="sp">Antigravity</span></div>
+          </div>
+          <div class="skill-cat reveal" data-d="400">
+            <div class="skill-cat-head"><div class="skill-icon-wrap"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Concepts</span></div>
+            <div class="skill-pills"><span class="sp">OOPs</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROJECTS ====== -->
+    <section id="projects" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>Projects</div>
+        <h2 class="sec-headline reveal">Work that<br/><em class="accent">speaks for itself.</em></h2>
+
+        <!-- ====== PROJECT 01: MARVEL MOVIES ====== -->
+        <div class="proj-featured proj-marvel reveal">
+          <div class="proj-feat-badge">Featured Project 01</div>
+          <div class="proj-feat-grid">
+            <div class="proj-feat-left">
+              <div class="proj-num">01</div>
+              <h3 class="proj-title">Marvel Cinematic Universe — Movie Hub</h3>
+              <p class="body-copy mt16">Immersive Marvel Cinematic Universe exploration and movie streaming portal. Features fullscreen cinematic intro animations, real-time live movie search, high-definition trailer previews, detailed character/phase archives, and a dynamic cosmic particle canvas designed for true Marvel fans.</p>
+              <ul class="feat-list">
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Fullscreen cinematic Marvel intro video &amp; custom audio</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-time instant search &amp; MCU phase filtering</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> High-definition movie posters, synopsis &amp; streaming previews</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cosmic canvas particle &amp; nebula background effects</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mobile-first responsive UI with Marvel crimson glow</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Optimized bundle with zero layout shift &amp; fast loading</li>
+              </ul>
+              <div class="tech-tags"><span class="tt">JavaScript</span><span class="tt">HTML5</span><span class="tt">CSS3</span><span class="tt">Vite</span><span class="tt">Cosmic UI</span><span class="tt">Netlify</span></div>
+              <div class="proj-actions">
+                <a href="https://marvel-studio.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/vardhaaman123/MarvelStudio" target="_blank" rel="noopener noreferrer" class="btn-ghost sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div class="proj-feat-right">
+              <div class="proj-mockup">
+                <div class="mock-bar"><span></span><span></span><span></span></div>
+                <div class="mock-screen">
+                  <div class="marvel-preview">
+                    <div class="mv-header">
+                      <div class="mv-brand">
+                        <span class="mv-marvel-box">MARVEL</span>
+                        <span class="mv-studios-text">MOVIES</span>
+                      </div>
+                      <div class="mv-search-pill">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        <span>Search Marvel...</span>
+                      </div>
+                    </div>
+                    <div class="mv-filters">
+                      <span class="mv-pill mv-active">All Movies</span>
+                      <span class="mv-pill">Phase 5</span>
+                      <span class="mv-pill">Avengers</span>
+                      <span class="mv-pill">Guardians</span>
+                    </div>
+                    <div class="mv-grid">
+                      <div class="mv-card">
+                        <div class="mv-poster mv-p1">
+                          <img src="https://marvel-studio.netlify.app/ironman-poster.jpg" alt="Iron Man Poster" class="mv-poster-img" loading="lazy" onerror="this.onerror=null; this.src='https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg';" />
+                          <span class="mv-badge">4K</span>
+                        </div>
+                        <div class="mv-card-info">
+                          <div class="mv-title">Iron Man</div>
+                          <div class="mv-meta"><span>2008</span><span class="mv-rating">&#x2B50; 7.9</span></div>
+                        </div>
+                      </div>
+                      <div class="mv-card">
+                        <div class="mv-poster mv-p2">
+                          <img src="https://marvel-studio.netlify.app/new%20Avengers%20Endgame.jpeg" alt="Avengers: Endgame Poster" class="mv-poster-img" loading="lazy" onerror="this.onerror=null; this.src='https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg';" />
+                          <span class="mv-badge">4K</span>
+                        </div>
+                        <div class="mv-card-info">
+                          <div class="mv-title">Avengers: Endgame</div>
+                          <div class="mv-meta"><span>2019</span><span class="mv-rating">&#x2B50; 8.4</span></div>
+                        </div>
+                      </div>
+                      <div class="mv-card">
+                        <div class="mv-poster mv-p3">
+                          <img src="https://i.pinimg.com/736x/e8/94/98/e894980513fab0daba640d166222e49a.jpg" alt="Spider-Man Poster" class="mv-poster-img" loading="lazy" onerror="this.onerror=null; this.src='https://marvel-studio.netlify.app/spiderman-no-way-home-poster.jpg';" />
+                          <span class="mv-badge">4K</span>
+                        </div>
+                        <div class="mv-card-info">
+                          <div class="mv-title">Spider-Man: NWH</div>
+                          <div class="mv-meta"><span>2021</span><span class="mv-rating">&#x2B50; 8.2</span></div>
+                        </div>
+                      </div>
+                      <div class="mv-card">
+                        <div class="mv-poster mv-p4">
+                          <img src="https://i.pinimg.com/1200x/21/41/69/214169a6103feb3874243a0f9d117fe0.jpg" alt="Thor: Ragnarok Poster" class="mv-poster-img" loading="lazy" onerror="this.onerror=null; this.src='https://marvel-studio.netlify.app/new%20Thor%20Ragnarok.jpg';" />
+                          <span class="mv-badge">4K</span>
+                        </div>
+                        <div class="mv-card-info">
+                          <div class="mv-title">Thor: Ragnarok</div>
+                          <div class="mv-meta"><span>2017</span><span class="mv-rating">&#x2B50; 7.9</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== PROJECT 02: GYM PRO ====== -->
+        <div class="proj-featured proj-gym reveal" data-d="100">
+          <div class="proj-feat-badge">Project 02</div>
+          <div class="proj-feat-grid">
+            <div class="proj-feat-left">
+              <div class="proj-num">02</div>
+              <h3 class="proj-title">Gym Pro — Bodybuilding &amp; Fitness Hub</h3>
+              <p class="body-copy mt16">Comprehensive fitness and bodybuilding web platform designed with high-energy cyberpunk dark aesthetics. Features interactive workout routine builders, muscle anatomy training guides, dynamic macro/calorie nutrition dashboards, and an AI coaching advisor interface for personalized fitness optimization.</p>
+              <ul class="feat-list">
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Interactive workout routine planner &amp; split builder</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Dynamic macro &amp; calorie nutrition calculation engine</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> AI coaching assistant for personalized workout suggestions</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Targeted muscle anatomy &amp; exercise demonstration directory</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Real-time workout progress tracking &amp; set log dashboard</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Responsive dark theme with vibrant emerald &amp; violet glow</li>
+              </ul>
+              <div class="tech-tags"><span class="tt">JavaScript</span><span class="tt">HTML5</span><span class="tt">Advanced CSS</span><span class="tt">Fitness AI</span><span class="tt">Responsive UI</span><span class="tt">Netlify</span></div>
+              <div class="proj-actions">
+                <a href="https://body-build.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/vardhaaman123/gym-pro" target="_blank" rel="noopener noreferrer" class="btn-ghost sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div class="proj-feat-right">
+              <div class="proj-mockup">
+                <div class="mock-bar"><span></span><span></span><span></span></div>
+                <div class="mock-screen">
+                  <div class="gym-preview">
+                    <div class="gp-header">
+                      <span class="gp-logo">&#x26A1; GymPro</span>
+                      <div class="gp-status-badge"><span class="gp-live-dot"></span> Active Routine</div>
+                    </div>
+                    <div class="gp-headline">
+                      <div class="gp-h1">Build Your Peak</div>
+                      <div class="gp-h2">Physique &amp; Strength</div>
+                    </div>
+                    <div class="gp-cards">
+                      <div class="gp-card">
+                        <div class="gp-ci">&#x1F3CB;&#xFE0F;</div>
+                        <div class="gp-ct">Workout Split</div>
+                        <div class="gp-val">Push Day (Chest/Tri)</div>
+                        <div class="gp-bar"><div class="gp-fill" style="width:85%"></div></div>
+                      </div>
+                      <div class="gp-card">
+                        <div class="gp-ci">&#x1F957;</div>
+                        <div class="gp-ct">Daily Nutrition</div>
+                        <div class="gp-val">2,450 / 2,800 kcal</div>
+                        <div class="gp-bar"><div class="gp-fill" style="width:70%"></div></div>
+                      </div>
+                      <div class="gp-card">
+                        <div class="gp-ci">&#x1F916;</div>
+                        <div class="gp-ct">AI Coach Advisor</div>
+                        <div class="gp-val">Optimal Rest: 90s</div>
+                        <div class="gp-bar"><div class="gp-fill" style="width:95%"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ====== PROJECT 03: CUBE PROJECT ====== -->
+        <div class="proj-featured proj-cube reveal" data-d="200">
+          <div class="proj-feat-badge">Project 03</div>
+          <div class="proj-feat-grid">
+            <div class="proj-feat-left">
+              <div class="proj-num">03</div>
+              <h3 class="proj-title">AI 3D Rubik's Cube Solver</h3>
+              <p class="body-copy mt16">Cutting-edge 3D Rubik's Cube solving web application powered by Computer Vision and optimal algorithmic solvers (Kociemba's Two-Phase algorithm). Features interactive WebGL 3D cube rendering, full 360° rotational physics, smart step-by-step move animations, and camera-based cube state detection.</p>
+              <ul class="feat-list">
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Interactive 3D WebGL cube renderer with smooth orbit controls</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Optimal two-phase AI solver computing ~20 move solutions</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Step-by-step 3D playback controls (Play, Pause, Step, Rewind)</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Computer Vision color detection for real physical cubes</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Scramble generator &amp; move notation sequence visualizer</li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Futuristic cyberpunk UI with neon cyan &amp; indigo holographic glow</li>
+              </ul>
+              <div class="tech-tags"><span class="tt">React</span><span class="tt">Three.js / WebGL</span><span class="tt">Vite</span><span class="tt">AI Algorithms</span><span class="tt">Computer Vision</span><span class="tt">Netlify</span></div>
+              <div class="proj-actions">
+                <a href="https://astonishing-crostata-93b248.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn-pill btn-sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Live Demo
+                </a>
+                <a href="https://github.com/vardhaaman123/ai-rubiks-cube-solver" target="_blank" rel="noopener noreferrer" class="btn-ghost sm">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div class="proj-feat-right">
+              <div class="proj-mockup">
+                <div class="mock-bar"><span></span><span></span><span></span></div>
+                <div class="mock-screen">
+                  <div class="cube-preview">
+                    <div class="cp-header">
+                      <span class="cp-logo">&#x1F9CA; AI Cube Solver</span>
+                      <span class="cp-badge-solved">&#x26A1; 20 Moves (Optimal)</span>
+                    </div>
+                    <div class="cp-body">
+                      <div class="cp-cube-visual">
+                        <div class="cp-cube-3d">
+                          <div class="cp-face cp-front">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                          </div>
+                          <div class="cp-face cp-top">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                          </div>
+                          <div class="cp-face cp-right">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cp-solver-info">
+                        <div class="cp-sol-label">Optimal Sequence</div>
+                        <div class="cp-sol-moves">
+                          <span class="cp-m cp-m-done">R</span>
+                          <span class="cp-m cp-m-done">U</span>
+                          <span class="cp-m cp-m-curr">R'</span>
+                          <span class="cp-m">U'</span>
+                          <span class="cp-m">F2</span>
+                          <span class="cp-m">D</span>
+                          <span class="cp-m">B'</span>
+                        </div>
+                        <div class="cp-progress-wrap">
+                          <div class="cp-progress-bar"><div class="cp-progress-fill" style="width: 65%;"></div></div>
+                          <span class="cp-step-text">Step 13 of 20</span>
+                        </div>
+                        <div class="cp-controls">
+                          <span class="cp-ctrl-btn">&#x23EE;</span>
+                          <span class="cp-ctrl-btn cp-play">&#x23F5; Solve</span>
+                          <span class="cp-ctrl-btn">&#x23ED;</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== EDUCATION ====== -->
+    <section id="education" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>Education</div>
+        <h2 class="sec-headline reveal">Academic<br/><em class="accent">foundation.</em></h2>
+        <div class="edu-timeline">
+          <div class="edu-item reveal-left">
+            <div class="edu-dot"></div>
+            <div class="edu-card">
+              <span class="edu-year">2022 – 2026</span>
+              <h3 class="edu-degree">B.Tech in Computer Science Engineering</h3>
+              <p class="edu-institution">Bahubali College of Engineering, Shravanabelagola</p>
+              <div class="edu-badges"><span class="edu-badge">CGPA: 7.0</span><span class="edu-badge">CSE</span></div>
+              <div class="coursework">
+                <span class="cw-label">Relevant Coursework:</span>
+                <span class="cw-item">Data Structures</span><span class="cw-item">Algorithms</span>
+                <span class="cw-item">Web Technologies</span><span class="cw-item">Database Management</span>
+                <span class="cw-item">Java Programming</span><span class="cw-item">Python</span>
+                <span class="cw-item">Software Engineering</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ====== EXTRA ACTIVITIES ====== -->
+    <section id="activities" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>Extra Activities</div>
+        <h2 class="sec-headline reveal">Beyond the<br/><em class="accent">code.</em></h2>
+        <div class="act-grid">
+          <div class="act-card reveal" data-d="0"><div class="act-icon">&#x1F3D0;</div><h3>Sports</h3><p>Actively participated in volleyball and cricket at college-level events and inter-department tournaments, building teamwork and leadership skills on the field.</p></div>
+          <div class="act-card reveal" data-d="100"><div class="act-icon">&#x1F4D6;</div><h3>Continuous Learning</h3><p>Regularly reads technical blogs and motivational books to stay current with industry trends and enhance personal growth through knowledge and self-study.</p></div>
+          <div class="act-card reveal" data-d="200"><div class="act-icon">&#x1F916;</div><h3>AI Exploration</h3><p>Enthusiastic about learning new technologies, particularly in AI and machine learning. Exploring practical AI applications in modern web development and data science.</p></div>
+          <div class="act-card reveal" data-d="300"><div class="act-icon">&#x2696;&#xFE0F;</div><h3>Balanced Growth</h3><p>Believes in maintaining a balance between academics, sports, and personal growth — continuously striving for versatile development across all areas of life.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACT ====== -->
+    <section id="contact" class="section">
+      <div class="page-width">
+        <div class="sec-label reveal"><span class="label-pip"></span>Get In Touch</div>
+        <div class="contact-grid">
+          <div class="contact-left reveal-left">
+            <h2 class="sec-headline">Let's build<br/><em class="accent">something great.</em></h2>
+            <p class="body-copy mt16">Actively looking for opportunities to apply skills in Java, React, and full-stack development. Whether an internship, entry-level role, or collaborative project — I'm ready to contribute and grow.</p>
+            <div class="contact-links">
+              <a href="mailto:vardhamanainapure189@gmail.com" class="contact-row"><div class="cr-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>vardhamanainapure189@gmail.com</span></a>
+              <a href="tel:+917337855102" class="contact-row"><div class="cr-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 8.82 19.79 19.79 0 01.07 2.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><span>+91 7337855102</span></a>
+              <div class="contact-row"><div class="cr-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#8052ff" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><span>Bengaluru, India</span></div>
+            </div>
+            <div class="socials">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc-icon" title="LinkedIn"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+              <a href="https://github.com/vardhaaman123" target="_blank" rel="noopener noreferrer" class="soc-icon" title="GitHub"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+            </div>
+          </div>
+          <div class="contact-right reveal-right">
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+              <div class="form-row-2">
+                <div class="fg"><label class="fl" for="cName">Name</label><input type="text" id="cName" name="name" class="form-input" placeholder="Your name" required autocomplete="name" /></div>
+                <div class="fg"><label class="fl" for="cEmail">Email</label><input type="email" id="cEmail" name="email" class="form-input" placeholder="your@email.com" required autocomplete="email" /></div>
+              </div>
+              <div class="fg"><label class="fl" for="cSubject">Subject</label><input type="text" id="cSubject" name="subject" class="form-input" placeholder="What's this about?" required /></div>
+              <div class="fg"><label class="fl" for="cMsg">Message</label><textarea id="cMsg" name="message" class="form-input ft" placeholder="Tell me about the opportunity..." required rows="5"></textarea></div>
+              <button type="submit" class="btn-pill btn-submit" id="submitBtn"><span id="submitTxt">Send Message</span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></button>
+              <div class="form-success" id="formSuccess" role="status" aria-live="polite"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#15846e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Message sent! I'll get back to you soon.</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page-width footer-inner">
+      <div class="footer-left">
+        <a href="#hero" class="nav-brand"><svg width="22" height="22" viewBox="0 0 48 48" fill="none"><polygon points="24,4 44,40 4,40" fill="none" stroke="#8052ff" stroke-width="3"/><polygon points="24,14 36,36 12,36" fill="#8052ff" opacity="0.3"/></svg><span>Vardhaman Ainapure</span></a>
+        <p class="footer-copy">Built with passion. &copy; 2026 Vardhaman Ainapure.</p>
+      </div>
+      <div class="footer-right">
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="soc-icon" title="LinkedIn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://github.com/vardhaaman123" target="_blank" rel="noopener noreferrer" class="soc-icon" title="GitHub"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+        <a href="mailto:vardhamanainapure189@gmail.com" class="soc-icon" title="Email"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        <a href="#hero" class="back-top" aria-label="Back to top"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
