@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vardhaman Ainapure - Resume</title>
   <style>
     @page {
@@ -12,6 +13,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      -webkit-tap-highlight-color: transparent;
     }
     body {
       font-family: 'Times New Roman', Times, serif;
@@ -22,6 +24,23 @@
       padding: 20px 24px;
       max-width: 850px;
       margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 16px 14px;
+        font-size: 10pt;
+      }
+      .entry-header, .entry-sub {
+        flex-direction: column;
+        gap: 2px;
+      }
+      .skills-table td {
+        display: block;
+        width: 100% !important;
+      }
+      .skill-cat {
+        margin-top: 6px;
+      }
     }
     .header {
       text-align: center;

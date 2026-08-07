@@ -403,6 +403,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const EASE = 0.06;
 
   document.addEventListener('mousemove', e => {
+    if (window.innerWidth <= 768) return; // avoid tilt interference on mobile touch
     const rect = orb.getBoundingClientRect();
     if (!rect.width) return;
     const cx = rect.left + rect.width / 2;
@@ -414,9 +415,16 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   function tickTilt() {
-    curX += (targetX - curX) * EASE;
-    curY += (targetY - curY) * EASE;
-    orb.style.transform = `perspective(700px) rotateX(${curX}deg) rotateY(${curY}deg) scale(${1 + Math.abs(curX + curY) * 0.0008})`;
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      // Let CSS handle mobile scaling smoothly without JS inline transform conflict
+      orb.style.transform = '';
+    } else {
+      curX += (targetX - curX) * EASE;
+      curY += (targetY - curY) * EASE;
+      const baseScale = 1 + Math.abs(curX + curY) * 0.0008;
+      orb.style.transform = `perspective(700px) rotateX(${curX}deg) rotateY(${curY}deg) scale(${baseScale})`;
+    }
     requestAnimationFrame(tickTilt);
   }
   tickTilt();
