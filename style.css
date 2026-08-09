@@ -1104,6 +1104,7 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     font-size: 15px;
     line-height: 1.65;
     max-width: 520px;
+    width: 100%;
     margin: 0 auto 28px;
     color: var(--color-silver-mist);
   }
@@ -1142,9 +1143,11 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     min-width: 0;
   }
   .orb-system {
-    transform: scale(0.68) !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.68) !important;
     transform-origin: center center !important;
-    margin: -40px auto !important;
+    margin: -40px 0 0 0 !important;
   }
 
   .skill-tags {
@@ -1409,8 +1412,10 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     flex: 1 1 100%;
   }
   .orb-system {
-    transform: scale(0.58) !important;
-    margin: -60px auto !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.58) !important;
+    margin: -60px 0 0 0 !important;
   }
   .proj-actions {
     grid-template-columns: 1fr;
@@ -1428,8 +1433,10 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     font-size: 26px;
   }
   .orb-system {
-    transform: scale(0.5) !important;
-    margin: -75px auto !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.5) !important;
+    margin: -75px 0 0 0 !important;
   }
 }
 
