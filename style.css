@@ -1065,6 +1065,11 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
   .hero {
     min-height: auto;
     padding: 100px 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   .hero-wrap {
     flex-direction: column;
