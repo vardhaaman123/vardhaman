@@ -1053,7 +1053,6 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
 
   .nav-wrap {
     height: 64px;
-    padding: 0;
     justify-content: space-between;
   }
 
@@ -1076,6 +1075,7 @@ img, svg, video, canvas { display: block; max-width: 100%; height: auto; }
     gap: 32px;
     text-align: center;
     align-items: center;
+    width: 100%;
   }
   .hero-left {
     width: 100%;
